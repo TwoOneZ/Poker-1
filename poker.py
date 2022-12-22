@@ -4,10 +4,6 @@ import copy
 rank_dict = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
              '9': 9, 'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 
-# red_joker_cards = [f'{rank}{red_suit}' for rank in list(range(2, 15)) for red_suit in ['D', 'H']]
-# black_joker_cards = [f'{rank}{black_suit}' for rank in list(range(2, 15)) for black_suit in ['C', 'S']]
-
-
 red_joker_cards = ['2D', '2H', '3D', '3H', '4D', '4H', '5D', '5H', '6D', '6H', '7D', '7H', '8D', '8H',
                    '9D', '9H', 'TD', 'TH', 'JD', 'JH', 'QD', 'QH', 'KD', 'KH', 'AD', 'AH']
 black_joker_cards = ['2C', '2S', '3C', '3S', '4C', '4S', '5C', '5S', '6C', '6S', '7C', '7S', '8C', '8S',

@@ -14,11 +14,15 @@
 
 Входные данные: "6C 7C 8C 9C TC 5C JS"
 
-![image](https://user-images.githubusercontent.com/108416225/209170362-542f16ec-ea1d-47b2-874b-8cc1453a7811.png)
+```python
+print(best_hand("6C 7C 8C 9C TC 5C JS".split()))
+```
 
-Результат: ('6C', '7C', '8C', '9C', 'TC')
+Результат: 
 
-![image](https://user-images.githubusercontent.com/108416225/209170712-7dbe07b3-864a-4fa4-b920-d09b4a510eed.png)
+```python
+('6C', '7C', '8C', '9C', 'TC')
+```
 
 ## Дополнительное задание:
 
@@ -34,19 +38,49 @@
 
 Входные данные: "TD TC 5H 5C 7C ?R ?B"
 
-![image](https://user-images.githubusercontent.com/108416225/209171562-e7059646-e8a5-4264-8f01-815fc274cc28.png)
+```python
+print(best_wild_hand("TD TC 5H 5C 7C ?R ?B".split()))
+```
 
-Результат: ('TD', 'TC', '7C', 'TH', 'TS')
+Результат: 
 
-![image](https://user-images.githubusercontent.com/108416225/209171687-ba170718-a023-4d05-99a2-4889127bc411.png)
+```text
+('TD', 'TC', '7C', 'TH', 'TS')
+```
 
 ## Прохождение тестов
 
 Тесты:
 
-![image](https://user-images.githubusercontent.com/108416225/209172016-4aa9699e-3bd8-4541-8b02-bb26274cf4be.png)
+```python
+def test_best_hand():
+    print("test_best_hand...")
+    assert (sorted(best_hand("6C 7C 8C 9C TC 5C JS".split()))
+            == ['6C', '7C', '8C', '9C', 'TC'])
+    assert (sorted(best_hand("TD TC TH 7C 7D 8C 8S".split()))
+            == ['8C', '8S', 'TC', 'TD', 'TH'])
+    assert (sorted(best_hand("JD TC TH 7C 7D 7S 7H".split()))
+            == ['7C', '7D', '7H', '7S', 'JD'])
+    print('OK')
+
+
+def test_best_wild_hand():
+    print("test_best_wild_hand...")
+    assert (sorted(best_wild_hand("6C 7C 8C 9C TC 5C ?B".split()))
+            == ['7C', '8C', '9C', 'JC', 'TC'])
+    assert (sorted(best_wild_hand("TD TC 5H 5C 7C ?R ?B".split()))
+            == ['7C', 'TC', 'TD', 'TH', 'TS'])
+    assert (sorted(best_wild_hand("JD TC TH 7C 7D 7S 7H".split()))
+            == ['7C', '7D', '7H', '7S', 'JD'])
+    print('OK')
+```
 
 Результаты:
 
-![image](https://user-images.githubusercontent.com/108416225/209172158-710f70bd-3ac9-4b40-945a-ea0449e3aeba.png)
+```text
+test_best_hand...
+OK
+test_best_wild_hand...
+OK
+```
 
